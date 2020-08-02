@@ -78,16 +78,12 @@ void midiForwardOnly() {
   lastCue = cueNumber;
 }
 
-void midiBackDisable() {
-
-}
-
 void midiIN() {
   if (MIDI.read()) {
     midiRead = true;
     midiDecode();
     //    midiForwardOnly(); // <------------ SEND FORWARD MESSAGES ONLY
-    midiBackDisable(); // <------------ SEND FORWARD MESSAGES ONLY
+
   } else {
     midiRead = false;
   }
